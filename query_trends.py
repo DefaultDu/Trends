@@ -6,7 +6,6 @@ from utils.load_conf import load_conf
 conf = load_conf()
 source_platform = conf['source_platform']
 for target_platform in source_platform:
-    print(f"target_platform: {target_platform}")
     url = f'https://api.itapi.cn/api/hotnews/{target_platform}?key={conf['key']}'
     response = requests.request("GET", url)
     # 获取当前时间，格式为 YYYYMMDDHHMMSS
